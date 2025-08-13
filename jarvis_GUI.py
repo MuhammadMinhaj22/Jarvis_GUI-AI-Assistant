@@ -47,7 +47,7 @@ def wishMe():
 
 def get_weather(city):
     try:
-        api_key = "f42b0d0e2a808c697e0fccf5f4c400c7"
+        api_key = "your_OpenWeather_api_key"
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         res = requests.get(url).json()
         if res["cod"] == 200:
@@ -188,6 +188,7 @@ submit_button.pack()
 
 
 root.after(1000, wishMe)
+
 
 
 root.mainloop()
